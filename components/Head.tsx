@@ -5,49 +5,42 @@ import { asset, Head } from "$fresh/runtime.ts";
 export interface HeadProps {
   title?: string;
   description?: string;
-  url: URL;
+  url?: URL;
   imageUrl?: string;
   faviconUrl?: string;
   styleUrls?: string[];
   themeColor?: string;
 }
 
-export const props: HeadProps = {
-  title: "Deco Live Template Site — edit this!",
-  description: "A complete digital commerce experience platform.",
-  url: new URL("https://deco.cx"),
+export const defaultProps: HeadProps = {
+  title: "deco.careers — trabalhe na edge, evolua na carreira",
+  description:
+    "Trabalhe para empresas que constroem o futuro da tecnologia de digital experience.",
+  url: new URL("https://deco.careers"),
   imageUrl: "https://via.placeholder.com/300",
   faviconUrl: "",
   styleUrls: [],
-  themeColor: "#003232",
+  themeColor: "#2FD180",
 };
 
 export default function HeadComponent(props: HeadProps) {
-  const {
-    title,
-    description,
-    url,
-    imageUrl,
-    faviconUrl,
-    styleUrls,
-    themeColor,
-  } = props;
+  const merged = { ...defaultProps, ...props };
   return (
     <Head>
-      <title>{title}</title>
-      <meta name="theme-color" content={themeColor}></meta>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <title>{merged.title}</title>
+      <meta name="theme-color" content={merged.themeColor}></meta>
+      <meta name="description" content={merged.description} />
+      <meta property="og:title" content={merged.title} />
+      <meta property="og:description" content={merged.description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url.href} />
+      <meta property="og:url" content={merged.url?.href} />
       <meta
         property="og:image"
-        content={imageUrl}
+        content={merged.imageUrl}
       />
       <link
         rel="shortcut icon"
-        href={faviconUrl}
+        href={merged.faviconUrl}
         type="image/x-icon"
       >
       </link>
@@ -63,7 +56,7 @@ export default function HeadComponent(props: HeadProps) {
       </link>
       <meta name="theme-color" content="#003232"></meta>
       <meta name="msapplication-TileColor" content="#003232"></meta>
-      {styleUrls?.map((styleUrl: string) => (
+      {merged.styleUrls?.map((styleUrl: string) => (
         <link rel="stylesheet" href={asset(styleUrl)}></link>
       ))}
     </Head>
