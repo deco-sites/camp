@@ -1,17 +1,17 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from "preact";
-import { createLivePage } from "$live/live.tsx";
+import { createLiveHandler, LivePage, LivePageData } from "$live/live.tsx";
+import type { PageProps } from "$fresh/server.ts";
+
 import Head from "../components/Head.tsx";
 import Layout from "../components/Layout.tsx";
 import GetStarted from "../components/GetStarted.tsx";
 
-export const { handler, LivePage } = createLivePage({
-  render: () => (
-    <Layout>
-      <Head />
-      <GetStarted />
-    </Layout>
-  ),
-});
-export default LivePage;
+const render = (props: PageProps<LivePageData>) => (
+  <Layout>
+    <Head />
+    <GetStarted />
+    <LivePage {...props} />
+  </Layout>
+);
+
+export const handler = createLiveHandler();
+export default render;

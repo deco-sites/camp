@@ -2,22 +2,25 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...path].tsx";
 import * as $1 from "./routes/index.tsx";
-import * as $$0 from "./islands/InspectVSCode.tsx";
+import * as $$0 from "./islands/Editor.tsx";
+import * as $$1 from "./islands/InspectVSCode.tsx";
 import * as $$$0 from "./components/GetStarted.tsx";
 import * as $$$1 from "./components/Head.tsx";
 import * as $$$2 from "./components/Layout.tsx";
 
 const manifest: DecoManifest = {
   routes: { "./routes/[...path].tsx": $0, "./routes/index.tsx": $1 },
-  islands: { "./islands/InspectVSCode.tsx": $$0 },
+  islands: { "./islands/Editor.tsx": $$0, "./islands/InspectVSCode.tsx": $$1 },
   components: {
     "./components/GetStarted.tsx": $$$0,
     "./components/Head.tsx": $$$1,
     "./components/Layout.tsx": $$$2,
   },
+  schemas: { GetStarted: null, Head: null, Layout: null },
   twind: {
     mode: "warn",
     theme: {
@@ -935,6 +938,7 @@ const manifest: DecoManifest = {
     },
   },
   baseUrl: import.meta.url,
+  config,
 };
 
 export default manifest;

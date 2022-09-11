@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { asset, Head } from "$fresh/runtime.ts";
 
 export interface HeadProps {
@@ -13,10 +11,10 @@ export interface HeadProps {
 }
 
 export const defaultProps: HeadProps = {
-  title: "deco.careers — trabalhe na edge, evolua na carreira",
+  title: "deco.camp — aprenda frontend fazendo",
   description:
-    "Trabalhe para empresas que constroem o futuro da tecnologia de digital experience.",
-  url: new URL("https://deco.careers"),
+    "Learn-to-earn — aprenda com desafios reais de frontend de empresas globais.",
+  url: new URL("https://deco.camp"),
   imageUrl: "https://via.placeholder.com/300",
   faviconUrl: "",
   styleUrls: [],

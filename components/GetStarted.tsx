@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
-
 export default function GetStarted() {
   return (
     <section class="pt-20 pb-32">
