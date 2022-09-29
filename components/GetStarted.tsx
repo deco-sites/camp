@@ -14,14 +14,20 @@ export default function GetStarted() {
           </div>
           <div class="w-full md:w-1/2 p-6">
             <div class="md:max-w-md">
-              <h2 class="mb-3 font-heading font-bold text-decogreen text-6xl sm:text-7xl">
-                Trabalhe para empresas que constroem o futuro da tecnologia de
-                digital experience.
+              <h2 class="mb-3 font-heading font-bold text-decogreen text-3xl sm:text-5xl">
+                Comece a aprender desenvolvimento web para ecommerce construindo
+                sites reais.
               </h2>
-              <p class="mb-4 text-lg font-light">
-                Aqui você encontra oportunidades de trabalho para empresas que
-                usam tecnologias de ponta — literalmente.
+              <p class="mb-8 text-lg font-light">
+                Nosso curso gratuito te ensina tecnologias de ponta —
+                literalmente — e a fazer sites rápidos que vendem bem. No final,
+                concorra a vagas em grandes marcas.
               </p>
+              <a href="https://forms.gle/p2rKQv8sG5BTKXdv8" target="_blank">
+                <button class="text-2xl bg-primary p-5 rounded-xl text-primary-dark font-bold shadow-xl">
+                  Quero participar!
+                </button>
+              </a>
             </div>
           </div>
         </div>
