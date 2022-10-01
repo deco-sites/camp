@@ -15,7 +15,7 @@ export const defaultProps: HeadProps = {
   description:
     "Learn-to-earn — aprenda com desafios reais de frontend de empresas globais.",
   url: new URL("https://deco.camp"),
-  imageUrl: "https://via.placeholder.com/300",
+  imageUrl: "https://deco.camp/deco-round.png",
   faviconUrl: "",
   styleUrls: [],
   themeColor: "#2FD180",
