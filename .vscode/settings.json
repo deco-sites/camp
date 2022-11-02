@@ -3,17 +3,12 @@
   "deno.lint": true,
   "deno.unstable": true,
   "deno.importMap": "./import_map.json",
-  "tailwindCSS.includeLanguages": {
-    "tsx": "html",
-    "html": "html",
-    "javascript": "javascript",
-    "typecript": "typescript",
-    "css": "css"
-  },
+  "[typescript]": { "editor.defaultFormatter": "denoland.vscode-deno" },
+  "[typescriptreact]": { "editor.defaultFormatter": "denoland.vscode-deno" },
   "editor.quickSuggestions": {
     "strings": true
   },
-  "editor.defaultFormatter": "denoland.vscode-deno",
+  "editor.formatOnSave": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   }

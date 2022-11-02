@@ -14,14 +14,13 @@ export default function GetStarted() {
           </div>
           <div class="w-full md:w-1/2 p-6">
             <div class="md:max-w-md">
-              <h2 class="mb-3 font-heading font-bold text-decogreen text-3xl sm:text-5xl">
-                Comece a aprender desenvolvimento web para ecommerce construindo
-                sites reais.
+              <h2 class="mb-8 font-heading font-bold text-decogreen text-3xl sm:text-4xl">
+                {`Comece a aprender webdev construindo sites de ecommerce reais.`}
               </h2>
               <p class="mb-8 text-lg font-light">
                 Nosso curso gratuito te ensina tecnologias de ponta —
-                literalmente — e a fazer sites rápidos que vendem bem. No final,
-                concorra a vagas em grandes marcas.
+                literalmente — para fazer sites rápidos. No final, concorra a
+                vagas de estágio em grandes marcas.
               </p>
               <a href="https://forms.gle/p2rKQv8sG5BTKXdv8" target="_blank">
                 <button class="text-2xl bg-primary p-5 rounded-xl text-primary-dark font-bold shadow-xl">
