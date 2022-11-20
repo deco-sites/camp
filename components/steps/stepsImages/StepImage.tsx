@@ -1,7 +1,7 @@
 const StepImage = (props: { src: string; alt: string }) => {
   return (
     <div>
-      <img src={props.src} alt={props.alt} />
+      <img src={props.src} alt={props.alt} class="max-w-[415px]" />
     </div>
   );
 };

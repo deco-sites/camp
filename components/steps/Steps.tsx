@@ -7,10 +7,10 @@ const Steps = () => {
     <div>
       <StepsHeader />
       <div class="md:flex max-w-[1100px] m-auto">
-        <div class="hidden md:block">
+        <div class="hidden md:block px-4">
           <StepsImages />
         </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block mx-auto">
           <img src="/vertical-line.png" />
         </div>
         <div>
