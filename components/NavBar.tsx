@@ -10,7 +10,7 @@ export default function NavBar() {
       <img src="/deco-logo.png" class="w-24 h-8" />
       <div class="hidden sm:flex">
         {navigation.map((link) => (
-          <div class="ml-8">
+          <div class="ml-8" key={link.id}>
             <a key={link.id} href={link.link}>
               {link.id == 3
                 ? (

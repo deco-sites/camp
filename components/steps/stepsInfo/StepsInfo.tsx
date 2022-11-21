@@ -27,7 +27,7 @@ const StepsInfo = () => {
   return (
     <div class="m-auto">
       {stepsInfo.map((step) => (
-        <div>
+        <div key={step.title}>
           <StepInfo title={step.title} text={step.text} />
         </div>
       ))}

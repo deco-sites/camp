@@ -3,7 +3,7 @@ const AuthorInfos = (
 ) => {
   return (
     <div class="text-center">
-      <span class="text-black text-xl">
+      <span class="text-black text-md sm:text-xl">
         {props.author}
         {" - "}
         {props.position}, <span class="font-bold">{props.company}</span>
