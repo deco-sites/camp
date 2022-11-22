@@ -11,7 +11,7 @@ const StepsImages = () => {
   return (
     <div class="m-auto">
       {stepsImg.map((step) => (
-        <div class="sm:py-10 py-8">
+        <div class="sm:py-10 py-8" key={step.alt}>
           <StepImage src={step.src} alt={step.alt} />
         </div>
       ))}

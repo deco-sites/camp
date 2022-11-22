@@ -21,12 +21,14 @@ const PersonaAccordion = () => {
         class="block md:grid sm:grid-cols-1 sm:gap-6 sm:grid-cols-1 lg:grid-cols-3"
       >
         {containers.map((cont) => (
-          <Container
-            name={cont.name}
-            icon={cont.icon}
-            class={cont.class}
-            att={cont.attachments}
-          />
+          <div key={cont.name}>
+            <Container
+              name={cont.name}
+              icon={cont.icon}
+              class={cont.class}
+              att={cont.attachments}
+            />
+          </div>
         ))}
       </ul>
     </div>
