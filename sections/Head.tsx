@@ -3,7 +3,7 @@ import { asset, Head } from "$fresh/runtime.ts";
 export interface HeadProps {
   title?: string;
   description?: string;
-  url?: URL;
+  url?: string;
   imageUrl?: string;
   faviconUrl?: string;
   styleUrls?: string[];
@@ -13,7 +13,7 @@ export interface HeadProps {
 export const defaultProps: HeadProps = {
   title: "deco.camp — aprenda frontend fazendo",
   description: "Aprenda frontend com desafios reais de ecommerce.",
-  url: new URL("https://deco.camp"),
+  url: "https://deco.camp",
   imageUrl: "https://deco.camp/deco-round.png",
   faviconUrl: "",
   styleUrls: [],
@@ -30,7 +30,7 @@ export default function HeadComponent(props: HeadProps) {
       <meta property="og:title" content={merged.title} />
       <meta property="og:description" content={merged.description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={merged.url?.href} />
+      <meta property="og:url" content={merged.url} />
       <meta
         property="og:image"
         content={merged.imageUrl}
