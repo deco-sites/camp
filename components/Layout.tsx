@@ -1,6 +1,11 @@
+import type { ComponentChildren } from "preact";
 import NavBar from "./NavBar.tsx";
 
-export default function Layout(props: any) {
+interface Props {
+  children: ComponentChildren;
+}
+
+export default function Layout(props: Props) {
   return (
     <div class="min-h-screen  text-primary-light bg-gray-100">
       <NavBar />

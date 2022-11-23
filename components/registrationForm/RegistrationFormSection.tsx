@@ -1,6 +1,3 @@
-import Button from "../ui/Button.tsx";
-import RegistrationInput from "./RegistrationInput.tsx";
-import RegistrationSteps from "./registrationSteps/RegistrationSteps.tsx";
 import RegistrationStepsHeader from "./registrationSteps/RegistrationStepsHeader.tsx";
 
 const registrationSteps = [
