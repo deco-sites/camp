@@ -1,7 +1,7 @@
 const navigation = [
   { id: 1, span: "Plataforma", link: "/" },
   { id: 2, span: "Experts", link: "/" },
-  { id: 3, span: "Comece Agora!", link: "/" },
+  { id: 3, span: "Comece Agora!", link: "https://deco.cx/discord" },
 ];
 
 export default function NavBar() {
@@ -27,7 +27,7 @@ export default function NavBar() {
           </div>
         ))}
       </div>
-      <div class="sm:hidden items-center">
+      <div class="hidden items-center">
         <button class="focus:outline-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"

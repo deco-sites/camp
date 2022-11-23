@@ -1,6 +1,10 @@
 const footerIcons = [
-  { href: "/", icon: "/gitHubIcon-footer.png", id: 1 },
-  { href: "/", icon: "/linkedinIcon-footer.png", id: 2 },
+  { href: "https://github.com/deco-cx", icon: "/gitHubIcon-footer.png", id: 1 },
+  {
+    href: "https://www.linkedin.com/company/deco-cx/",
+    icon: "/linkedinIcon-footer.png",
+    id: 2,
+  },
 ];
 
 const Footer = () => {
@@ -10,13 +14,15 @@ const Footer = () => {
         <div>
           <img src="/decoLogo-footer.png" />
         </div>
-        <p class="text-white text-sm md:mt-0 mt-10">
+        {
+          /* <p class="text-white text-sm md:mt-0 mt-10">
           Nibh volutpat, aliquam id sagittis elementum.
-        </p>
+        </p> */
+        }
         <div class="flex md:mt-0 mt-10">
           {footerIcons.map((icon) => (
             <a href={icon.href} key={icon.id}>
-              <div class="ml-4">
+              <div class="ml-4" target="_blank" rel="noopener noreferrer">
                 <img src={icon.icon} />
               </div>
             </a>

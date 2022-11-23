@@ -50,9 +50,21 @@ const RegistrationFormSection = () => {
   return (
     <div class="lg:flex justify-between max-w-[1100px] mx-auto">
       <div class="max-w-[510px] mx-auto">
-        <RegistrationStepsHeader text="Participe da lista de espera para a" />
-        <div class="flex">
-          <div class="mt-[2px]">
+        <RegistrationStepsHeader text="Comece agora!" />
+        <div class="flex justify-center items-center">
+          <a
+            href="https://deco.cx/discord"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/18706156/203458425-4cb379c1-57d1-4384-a679-d7790c609fab.png"
+              alt="Entre para nosso Discord"
+              width="290"
+            />
+          </a>
+          {
+            /* <div class="mt-[2px]">
             <img src="/registration-steps.png" />
           </div>
           <div class="block ml-8">
@@ -63,11 +75,13 @@ const RegistrationFormSection = () => {
                 class={step.class}
               />
             ))}
-          </div>
+          </div> */
+          }
         </div>
       </div>
 
-      <div class="bg-white rounded-xl p-6 max-w-[403px] flex-1 mx-auto md:mt-0 mt-10">
+      {
+        /* <div class="bg-white rounded-xl p-6 max-w-[403px] flex-1 mx-auto md:mt-0 mt-10">
         <div>
           <label
             htmlFor="email"
@@ -119,7 +133,8 @@ const RegistrationFormSection = () => {
         <div class="mt-12">
           <Button>Cadastrar</Button>
         </div>
-      </div>
+      </div> */
+      }
     </div>
   );
 };

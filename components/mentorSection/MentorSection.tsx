@@ -13,8 +13,8 @@ const MentorSection = () => {
         />
         <div class="block max-w-[438px] mx-auto">
           <MentorImg />
-          <div class="ml-16">
-            <MentorInfos name="Luciano Junior" position="CTO na Deco.cx" />
+          <div class="sm:ml-16">
+            <MentorInfos name="Luciano Júnior" position="CTO na Deco.cx" />
           </div>
         </div>
       </div>

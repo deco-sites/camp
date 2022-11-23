@@ -59,7 +59,7 @@ export default function Container(
                 ))}
 
                 <div class="mt-8 mb-2">
-                  <Button>Comece agora!</Button>
+                  <Button href="https://deco.cx/discord">Comece agora!</Button>
                 </div>
               </div>
             </div>
