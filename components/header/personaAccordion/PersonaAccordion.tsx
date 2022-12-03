@@ -1,4 +1,5 @@
 import Container from "./Container.tsx";
+import { useState } from "preact/hooks";
 
 const containers = [
   {
@@ -15,22 +16,18 @@ const containers = [
 
 const PersonaAccordion = () => {
   return (
-    <div>
-      <ul
-        role="list"
-        class="block md:grid sm:grid-cols-1 sm:gap-6 sm:grid-cols-1 lg:grid-cols-3"
-      >
-        {containers.map((cont) => (
-          <div key={cont.name}>
-            <Container
-              name={cont.name}
-              icon={cont.icon}
-              class={cont.class}
-              att={cont.attachments}
-            />
-          </div>
-        ))}
-      </ul>
+    <div class="lg:flex block justify-between w-full">
+      {containers.map((cont, i) => (
+        <div class="mx-6 max-w-[320px] w-full mx-auto " key={cont.name}>
+          <Container
+            name={cont.name}
+            icon={cont.icon}
+            class={cont.class}
+            att={cont.attachments}
+            index={i}
+          />
+        </div>
+      ))}
     </div>
   );
 };

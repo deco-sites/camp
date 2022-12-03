@@ -9,6 +9,8 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/InspectVSCode.tsx";
+import * as $$1 from "./islands/test.tsx";
+import * as $$2 from "./islands/test2.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 
@@ -19,7 +21,11 @@ const manifest: DecoManifest = {
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
   },
-  islands: { "./islands/InspectVSCode.tsx": $$0 },
+  islands: {
+    "./islands/InspectVSCode.tsx": $$0,
+    "./islands/test.tsx": $$1,
+    "./islands/test2.tsx": $$2,
+  },
   sections: { "./sections/GetStarted.tsx": $$$0, "./sections/Head.tsx": $$$1 },
   functions: {},
   schemas: {
