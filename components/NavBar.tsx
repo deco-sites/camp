@@ -6,7 +6,7 @@ const navigation = [
 
 export default function NavBar() {
   return (
-    <div class="flex flex-row justify-between sm:justify-around m-auto p-4 items-center ">
+    <div class="flex flex-row justify-between sm:justify-around m-auto p-4 items-center relative">
       <img src="/deco-logo.png" class="w-24 h-8" />
       <div class="hidden sm:flex">
         {navigation.map((link) => (

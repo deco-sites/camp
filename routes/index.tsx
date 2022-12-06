@@ -6,14 +6,18 @@ import RegistrationFormSection from "../components/registrationForm/Registration
 import Steps from "../components/steps/Steps.tsx";
 import LiveAnalytics from "$live/components/LiveAnalytics.tsx";
 import type { PageProps } from "$fresh/server.ts";
+import NavBar from "../components/NavBar.tsx";
+import Layout from "../components/Layout.tsx";
+import Head from "../sections/Head.tsx";
 
 function Page(_props: PageProps<undefined>) {
   return (
     <>
       {/* Tracks users who enters this page */}
       <LiveAnalytics path="/" />
-
-      <div>
+      <Head />
+      <Layout>
+        <NavBar />
         <Header />
         <div class="px-10">
           <Steps />
@@ -24,7 +28,7 @@ function Page(_props: PageProps<undefined>) {
         <div class="mt-10">
           <Footer />
         </div>
-      </div>
+      </Layout>
     </>
   );
 }

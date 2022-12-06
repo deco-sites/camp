@@ -6,7 +6,6 @@ export default function Container(
     name: string;
     class: string;
     icon: string;
-    index: any;
     att: { name: string }[] | undefined;
   },
 ) {
@@ -83,7 +82,7 @@ export default function Container(
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="w-6 h-6"
+                            class="w-6 h-6 text-black"
                           >
                             <path
                               stroke-linecap="round"
