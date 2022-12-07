@@ -4,11 +4,6 @@ import MentorText from "./MentorText.tsx";
 const MentorSection = () => {
   return (
     <div class="w-full relative">
-      {
-        /* <div class="absolute left-0 hidden xl:block">
-        <img src="/gray-efect.png" />
-      </div> */
-      }
       <div class="shadow border border-gray-200 max-w-[1100px] m-auto rounded-xl bg-white py-4">
         <div class="md:flex justify-around items-center mx-auto flex-1">
           <MentorText
