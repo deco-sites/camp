@@ -9,9 +9,15 @@ const CommentsSection = () => {
         <div class="relative left-8 sm:left-0 mx-auto max-w-[113px] mb-14">
           <img src="/quotes.png" />
         </div>
-        <UserComment comment="Foram incríveis dias de discussões de arquitetura e implementação, 
+        <div>
+          <div class="absolute left-0  hidden xl:block">
+            <img src="/green-efect.png" />
+          </div>
+          <UserComment comment="Foram incríveis dias de discussões de arquitetura e implementação, 
         fora todo a acomodação e eventos que eles preparam para a gente, como um super study group que levarei para o resto da minha vida. No final o MVP saiu,
          apresentamos e foi um sucesso, que semana incrível!" />
+        </div>
+
         <div class="mt-4">
           <AuthorInfos
             author="Thiago Veras"
