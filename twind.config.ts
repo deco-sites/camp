@@ -2,6 +2,21 @@
 export default {
   theme: {
     extend: {
+      transitionProperty: {
+        "height": "height",
+      },
+
+      animation: {
+        wind: "wind 3s ease-in-out infinite",
+      },
+
+      keyframes: {
+        wind: {
+          "0%, 100%": { transform: "translateY(-25%)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+      },
+
       backgroundImage: {
         radial:
           "radial-gradient(circle closest-corner at 99.5%, var(--tw-gradient-from), var(--tw-gradient-to))",

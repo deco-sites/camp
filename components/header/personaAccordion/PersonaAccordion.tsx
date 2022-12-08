@@ -1,5 +1,4 @@
 import Container from "./Container.tsx";
-import { useState } from "preact/hooks";
 
 const containers = [
   {
@@ -18,14 +17,14 @@ const containers = [
       name: "Seja orientado por experts.",
     }, { name: "Trabalhe para grandes marcas." }],
   },
-  { name: "Empresas", icon: "/business-icon.png", class: "h-10" },
+  { name: "Empresas", icon: "/business-icon.png", class: "h-10", open: false },
 ];
 
 const PersonaAccordion = () => {
   return (
     <div class="lg:flex block justify-between w-full ">
       {containers.map((cont) => (
-        <div class="mx-6 max-w-[320px] w-full mx-auto" key={cont.name}>
+        <div class="mx-6 mt-6 max-w-[320px] w-full mx-auto" key={cont.name}>
           <Container
             name={cont.name}
             icon={cont.icon}
