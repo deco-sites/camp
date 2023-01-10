@@ -8,11 +8,14 @@ import * as $0 from "./routes/[...path].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
-import * as $$0 from "./islands/InspectVSCode.tsx";
-import * as $$1 from "./islands/test.tsx";
-import * as $$2 from "./islands/test2.tsx";
+import * as $4 from "./routes/login/success/[...redirect].tsx";
+import * as $$0 from "./islands/AuthListener.tsx";
+import * as $$1 from "./islands/InspectVSCode.tsx";
+import * as $$2 from "./islands/test.tsx";
+import * as $$3 from "./islands/test2.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
+import * as $$$2 from "./sections/Unit.tsx";
 
 const manifest: DecoManifest = {
   routes: {
@@ -20,13 +23,19 @@ const manifest: DecoManifest = {
     "./routes/_app.tsx": $1,
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
+    "./routes/login/success/[...redirect].tsx": $4,
   },
   islands: {
-    "./islands/InspectVSCode.tsx": $$0,
-    "./islands/test.tsx": $$1,
-    "./islands/test2.tsx": $$2,
+    "./islands/AuthListener.tsx": $$0,
+    "./islands/InspectVSCode.tsx": $$1,
+    "./islands/test.tsx": $$2,
+    "./islands/test2.tsx": $$3,
   },
-  sections: { "./sections/GetStarted.tsx": $$$0, "./sections/Head.tsx": $$$1 },
+  sections: {
+    "./sections/GetStarted.tsx": $$$0,
+    "./sections/Head.tsx": $$$1,
+    "./sections/Unit.tsx": $$$2,
+  },
   functions: {},
   schemas: {
     "./sections/GetStarted.tsx": {
@@ -35,26 +44,42 @@ const manifest: DecoManifest = {
     },
     "./sections/Head.tsx": {
       "inputSchema": {
+        "title": " Head",
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
+            "type": [
+              "string",
+              "null",
+            ],
             "title": "Title",
           },
           "description": {
-            "type": "string",
+            "type": [
+              "string",
+              "null",
+            ],
             "title": "Description",
           },
           "url": {
-            "type": "string",
+            "type": [
+              "string",
+              "null",
+            ],
             "title": "Url",
           },
           "imageUrl": {
-            "type": "string",
+            "type": [
+              "string",
+              "null",
+            ],
             "title": "Image Url",
           },
           "faviconUrl": {
-            "type": "string",
+            "type": [
+              "string",
+              "null",
+            ],
             "title": "Favicon Url",
           },
           "styleUrls": {
@@ -65,8 +90,110 @@ const manifest: DecoManifest = {
             "title": "Style Urls",
           },
           "themeColor": {
-            "type": "string",
+            "type": [
+              "string",
+              "null",
+            ],
             "title": "Theme Color",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Unit.tsx": {
+      "inputSchema": {
+        "title": " Unit",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Title",
+          },
+          "description": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Description",
+          },
+          "videoEmbeddedUrl": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Video Embedded Url",
+          },
+          "youtubeVideo": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Youtube Video",
+            "default": "Y2DcMhCJSDI",
+          },
+          "body": {
+            "format": "html",
+            "type": "string",
+            "title": "Body",
+          },
+          "tests": {
+            "title": "Tests",
+            "type": "array",
+            "items": {
+              "title": "Test",
+              "type": "object",
+              "properties": {
+                "question": {
+                  "type": "string",
+                  "title": "Question",
+                },
+                "type": {
+                  "type": "string",
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "const": "checkbox",
+                    },
+                    {
+                      "type": "string",
+                      "const": "radio",
+                    },
+                  ],
+                  "title": "Type",
+                },
+                "alternatives": {
+                  "title": "Alternatives",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                  },
+                },
+                "comments": {
+                  "title": "Comments",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                  },
+                },
+                "correctAnswers": {
+                  "title": "Correct Answers",
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                  },
+                },
+              },
+              "required": [
+                "question",
+                "type",
+                "alternatives",
+                "correctAnswers",
+              ],
+            },
           },
         },
         "required": [],

@@ -12,7 +12,6 @@ import partytownPlugin from "partytown/mod.ts";
 import prefetchPlugin from "prefetch";
 
 await start(manifest, {
-  port: 3000,
   plugins: [
     stylesPlugin(),
     prefetchPlugin(),
