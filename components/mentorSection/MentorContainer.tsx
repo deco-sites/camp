@@ -8,7 +8,7 @@ const peopleTeam = [
   {
     img: "/image 63.png",
     name: "Luciano Júnior",
-    positon: "CTO na deco.cx",
+    positon: "Software Engineer na deco.cx",
     linkedin: "lcnjnr",
     github: "lucis",
   },
