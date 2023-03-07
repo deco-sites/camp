@@ -16,7 +16,7 @@ const stepsInfo = [
     alt: "",
     title: "Entre para a comunidade",
     text:
-      "No nosso canal do Discord você tira suas dúvidas, encontra especialistas em comércios digital e expande seu network.",
+      "No nosso canal do Discord você tira suas dúvidas, encontra especialistas em comércio digital e expande seu network.",
   },
   {
     src: "/steps-gridImg.png",

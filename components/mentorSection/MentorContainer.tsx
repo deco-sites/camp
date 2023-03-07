@@ -8,14 +8,7 @@ const peopleTeam = [
   {
     img: "/image 63.png",
     name: "Luciano Júnior",
-    positon: "CTO na Deco.xs",
-    linkedin: "lcnjnr",
-    github: "lucis",
-  },
-  {
-    img: "/image 63.png",
-    name: "Luciano ",
-    positon: "CTO na Deco.xs",
+    positon: "CTO na deco.cx",
     linkedin: "lcnjnr",
     github: "lucis",
   },
@@ -58,7 +51,8 @@ const MentorContainer = () => {
   return (
     <div>
       <div class="flex items-center">
-        <div>
+        {/* TODO: Remove after adding more mentors */}
+        <div class="hidden">
           <button
             class="focus:outline-none mr-6 mb-20"
             onClick={() => changePageLeft()}
@@ -67,7 +61,7 @@ const MentorContainer = () => {
           </button>
         </div>
         {displayUser}
-        <div>
+        <div class="hidden">
           <button
             class="focus:outline-none ml-6 mb-20"
             onClick={() => changePageRight()}
