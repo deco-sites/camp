@@ -1,0 +1,5 @@
+{
+  "siteId": 92,
+  "namespace": "deco-sites/camp",
+  "imports": ["$live/live.gen.ts"]
+}

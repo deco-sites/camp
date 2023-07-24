@@ -50,7 +50,7 @@ const Steps = () => {
           <div class="xl:flex mx-auto hidden">
             <div class=" m-auto px-10 flex-1">
               {stepsImg.map((step) => (
-                <div class="sm:py-10 py-8 px-4" key={step.alt}>
+                <div class="sm:py-10 py-8 px-4">
                   <StepImage src={step.src} alt={step.alt} />
                 </div>
               ))}

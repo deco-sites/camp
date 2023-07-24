@@ -6,7 +6,7 @@ export default function Container(
     name: string;
     class: string;
     icon: string;
-    index: any;
+    index: unknown;
     att: { name: string }[] | undefined;
   },
 ) {
